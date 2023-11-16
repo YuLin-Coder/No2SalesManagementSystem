@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.storems.admin.dao.OutstoreDao">
+
+    <select id="findOutstorePage" resultType="java.util.Map" parameterType="java.util.Map">
+
+        select ID As id,
+            GOODS_ID As goodsId,
+            CONSUMER_ID As consumerId,
+            USER_ID As userId,
+            OUT_DATE As outDate,
+            PRICE As price,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            CONSUMER_NAME As consumerName,
+            USERNAME As userName
+        from tb_outstore
+        limit #{begin},  #{pageSize}
+    </select>
+
+    <select id="findOutstorePageCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*)  from tb_outstore
+    </select>
+
+
+    <select id="findById" resultType="com.storems.admin.entity.Outstore" >
+
+        select ID As id,
+             GOODS_ID As goodsId,
+            CONSUMER_ID As consumerId,
+            USER_ID As userId,
+            OUT_DATE As outDate,
+            PRICE As price,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            CONSUMER_NAME As consumerName,
+            USERNAME As userName
+        from tb_outstore
+        where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.storems.admin.entity.Outstore" >
+        INSERT INTO tb_outstore (ID,GOODS_ID,CONSUMER_ID,USER_ID,OUT_DATE,PRICE,AMOUNT,NOTE,GOODS_NAME,CONSUMER_NAME,USERNAME)
+        VALUES (#{id},#{goodsId},#{consumerId},#{userId},#{outDate},#{price}, #{amount}, #{note}, #{goodsName}, #{consumerName}, #{userName})
+    </insert>
+
+
+    <update id="update" parameterType="com.storems.admin.entity.Outstore" >
+       UPDATE tb_outstore
+        SET
+            GOODS_ID =#{goodsId},
+            CONSUMER_ID =#{consumerId},
+            USER_ID =#{userId},
+            OUT_DATE =#{outDate},
+            PRICE =#{price},
+            AMOUNT =#{amount},
+            NOTE =#{note},
+            GOODS_NAME =#{goodsName},
+            CONSUMER_NAME =#{consumerName},
+            USERNAME =#{userName}
+             WHERE ID = #{id}
+        </update>
+
+    <delete id="batchDelete" >
+        DELETE FROM tb_outstore WHERE ID = #{id}
+    </delete>
+
+    <select id="statisticalByParam" resultType="com.storems.admin.entity.Outstore" parameterType="java.util.Map" >
+
+        select ID As id,
+             GOODS_ID As goodsId,
+            CONSUMER_ID As consumerId,
+            USER_ID As userId,
+            OUT_DATE As outDate,
+            PRICE As price,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            CONSUMER_NAME As consumerName,
+            USERNAME As userName
+        from tb_outstore
+        where  OUT_DATE >=#{startDate} and #{endDate} >= OUT_DATE order by OUT_DATE desc;
+    </select>
+
+</mapper>

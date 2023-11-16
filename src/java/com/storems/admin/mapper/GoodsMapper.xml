@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.storems.admin.dao.GoodsDao">
+
+    <select id="findGoodsPage" resultType="java.util.Map" parameterType="java.util.Map">
+
+        select ID As id,
+            NAME As name,
+            CODE As code,
+            TYPE As type,
+            SPECIFICATION As specification,
+            PRODUCTION_DATE As productionDate,
+            SHELF_LIFE As shelfLife,
+            UNIT As unit,
+            PRICE As price,
+            NOTE As note
+        from tb_goods
+        limit #{begin},  #{pageSize}
+    </select>
+
+    <select id="findGoodsPageCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*)  from tb_goods
+    </select>
+
+
+    <select id="findById" resultType="com.storems.admin.entity.Goods" >
+
+        select ID As id,
+             NAME As name,
+            CODE As code,
+            TYPE As type,
+            SPECIFICATION As specification,
+            PRODUCTION_DATE As productionDate,
+            SHELF_LIFE As shelfLife,
+            UNIT As unit,
+            PRICE As price,
+            NOTE As note
+        from tb_goods
+        where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.storems.admin.entity.Goods" >
+        INSERT INTO tb_goods (ID,NAME,CODE,TYPE,SPECIFICATION,PRODUCTION_DATE,SHELF_LIFE,UNIT,PRICE,NOTE)
+        VALUES (#{id},#{name},#{code},#{type},#{specification},#{productionDate}, #{shelfLife},#{unit},#{price},#{note})
+    </insert>
+
+
+    <update id="update" parameterType="com.storems.admin.entity.Goods" >
+       UPDATE tb_goods
+        SET
+            NAME =#{name},
+            CODE =#{code},
+            TYPE =#{type},
+            SPECIFICATION =#{specification},
+            PRODUCTION_DATE =#{productionDate},
+            SHELF_LIFE =#{shelfLife},
+            UNIT =#{unit},
+            PRICE =#{price},
+            NOTE =#{note}
+             WHERE ID = #{id}
+
+        </update>
+
+    <delete id="batchDelete" >
+        DELETE FROM tb_goods WHERE ID = #{id}
+    </delete>
+
+
+
+    <select id="findAll" resultType="com.storems.admin.entity.Goods" >
+
+        select ID As id,
+             NAME As name,
+            CODE As code,
+            TYPE As type,
+            SPECIFICATION As specification,
+            PRODUCTION_DATE As productionDate,
+            SHELF_LIFE As shelfLife,
+            UNIT As unit,
+            PRICE As price,
+            NOTE As note
+        from tb_goods
+    </select>
+</mapper>

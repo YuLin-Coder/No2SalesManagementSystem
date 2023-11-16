@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.storems.admin.dao.AccountDao">
+
+
+
+
+    <!-- 管理员登录 -->
+    <select id="login" resultType="com.storems.admin.entity.Account" parameterType="com.storems.admin.entity.Account">
+
+         select ID As id,
+        USERNAME As userName,
+        PASSWORD As password,
+        REAL_NAME As realName,
+        LINK_PHONE As linkPhone,
+        REG_DATE As regDate,
+        SEX As sex,
+        AGE As age,
+        ADDRESS As address,
+        ID_CARD As idCard,
+        ROLE_LEVEL As roleLevel,
+        STATE As state,
+        NOTE As note from tb_account where userName=#{userName} and password=#{password}
+
+    </select>
+
+
+    <select id="findAccountPage" resultType="java.util.Map" parameterType="java.util.Map">
+
+        select ID As id,
+            USERNAME As userName,
+            PASSWORD As password,
+            REAL_NAME As realName,
+            LINK_PHONE As linkPhone,
+            REG_DATE As regDate,
+            SEX As sex,
+            AGE As age,
+            ADDRESS As address,
+            ID_CARD As idCard,
+            ROLE_LEVEL As roleLevel,
+            STATE As state,
+            NOTE As note
+        from tb_account
+        limit #{begin},  #{pageSize}
+    </select>
+
+    <select id="findAccountPageCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*)  from tb_account
+    </select>
+
+    <select id="findById" resultType="com.storems.admin.entity.Account" >
+
+        select ID As id,
+            USERNAME As userName,
+            PASSWORD As password,
+            REAL_NAME As realName,
+            LINK_PHONE As linkPhone,
+            REG_DATE As regDate,
+            SEX As sex,
+            AGE As age,
+            ADDRESS As address,
+            ID_CARD As idCard,
+            ROLE_LEVEL As roleLevel,
+            STATE As state,
+            NOTE As note
+        from tb_account
+        where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.storems.admin.entity.Account" >
+        INSERT INTO tb_account (ID,USERNAME,PASSWORD,REAL_NAME,LINK_PHONE,REG_DATE,SEX,AGE,ADDRESS,ID_CARD,ROLE_LEVEL,STATE,NOTE)
+        VALUES (#{id},#{userName},#{password},#{realName},#{linkPhone},#{regDate}, #{sex},#{age},#{address},#{idCard},#{roleLevel},#{state},#{note})
+    </insert>
+
+
+    <update id="update" parameterType="com.storems.admin.entity.Account" >
+       UPDATE tb_account
+        SET
+            USERNAME =#{userName},
+            PASSWORD =#{password},
+            REAL_NAME =#{realName},
+            LINK_PHONE =#{linkPhone},
+            REG_DATE =#{regDate},
+            SEX =#{sex},
+            AGE =#{age},
+            ADDRESS =#{address},
+            ID_CARD =#{idCard},
+            ROLE_LEVEL =#{roleLevel},
+            STATE =#{state},
+            NOTE =#{note} WHERE ID = #{id}
+
+        </update>
+
+    <delete id="batchDelete" >
+        DELETE FROM tb_account WHERE ID = #{id}
+    </delete>
+</mapper>

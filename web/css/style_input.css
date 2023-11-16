@@ -1,0 +1,275 @@
+/* Login button style */
+.bt_login {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_login.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_login:hover {
+	background-image: url("../image/img/bt_login_on.gif");
+}
+
+/* Add button style */
+.bt_add {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_add.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_add:hover {
+	background-image: url("../image/img/bt_add_on.gif");
+}
+
+/* Reset button style */
+.bt_reset {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_reset.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_reset:hover {
+	background-image: url("../image/img/bt_reset_on.gif");
+}
+
+/* Search button style */
+.bt_search {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_search.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_search:hover {
+	background-image: url("../image/img/bt_search_on.gif");
+}
+
+/* Submit button style */
+.bt_submit {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_submit.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_submit:hover {
+	background-image: url("../image/img/bt_submit_on.gif");
+}
+
+/* Refresh button style */
+.bt_refresh {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_refresh.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_refresh:hover {
+	background-image: url("../image/img/bt_refresh_on.gif");
+}
+
+/* Clear button style */
+.bt_clear {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/bt_clear.gif");
+	width: 50px;
+	height: 21px;
+}
+
+.bt_clear:hover {
+	background-image: url("../image/img/bt_clear_on.gif");
+}
+
+/* Test button style */
+.bt_test {
+	background-color: #FFF0A5;
+	border: none;
+	color: #F33;
+	cursor: pointer;
+	background-image: url("../image/img/test.gif");
+	width: 50px;
+	height: 21px;
+}
+
+/* Notice manage*/
+.input_td_weight {
+	border: none;
+	background-color: #FFF;
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+	width: 100%;
+	color: #333;
+}
+
+.input_td_blue {
+	width: 100%;
+	border: none;
+	background-color: #D3EAEF;
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+	color: #333;
+}
+
+.input_td_focus {
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 2px;
+	text-align: left;
+	color: #7C8F04;
+	background-color: #ffefef;
+}
+
+/*蓝色的按钮-适用于各种超链接 和 按钮*/
+.bt_blue {
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	display: inline-block;
+	width: 120px;
+	height: 33px;
+	background-image: url("../image/img/bt_blue.gif");
+	text-align: center;
+	text-decoration: none;
+	line-height: 33px;
+	font-size: 17px;
+	color: #FFF;
+	font-family: 'Microsoft yahei';
+	cursor: pointer;
+}
+
+.bt_blue:hover {
+	color: #FF6000;
+	text-decoration: none;
+}
+
+/*搜索框*/
+.div_search {
+	width: 100%;
+	height: 26px;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Microsoft yahei";
+	line-height: 26px;
+	margin-bottom: 5px;
+}
+
+.input_search {
+	width: 400px;
+	height: 26px;
+	background-color: #FFF;
+	border: 1px solid #7AAEBD;
+	font-size: 16px;
+	color: #999;
+	padding: 2px;
+	margin: 0;
+}
+
+.input_search_focus {
+	color: #113965;
+}
+
+.div_search_input {
+	float: left;
+}
+
+.div_search_bt {
+	float: left;
+	margin-left: 5px;
+}
+
+.div_search_bt img{
+	border: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 26px;
+	height: 26px;
+}
+
+.input_search_info{
+	width: 398px;
+	height: auto;
+	background-color: #F8F8F8;
+	position: absolute;
+	z-index: 1px;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #dadada;
+	display: none;
+}
+
+.input_search_info li{
+	margin-left: 5px;
+	padding: 0;
+	list-style: none;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.batch_delete{
+	width: auto;
+	height: auto;
+	background-color: #FFF;
+	border: none;
+	cursor: pointer;
+	color: #07519A;
+	margin: 0;
+	padding: 0;
+}
+
+/*提示信息*/
+.div_status {
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	z-index: 1px;
+	background-color: #66CCFF;
+	margin: 0;
+	padding: 0;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	font-family: "Microsoft yahei";
+	color: #FFF;
+	margin-top: 8%;
+	margin-left: 38%;
+	display: none;
+}
+
+/*下拉列表样式*/
+.input_select{
+	width: auto;
+	border: 1px solid #7AAEBD;
+	background-color: #FFF;
+	font-size: 13px;
+	color: #07519A;
+}

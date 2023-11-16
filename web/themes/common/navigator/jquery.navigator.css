@@ -1,0 +1,42 @@
+﻿/* 全局设置 */
+.dynamic-nav *{ margin:0; padding:0;}
+.dynamic-nav ul{ list-style:none;}
+.dynamic-nav li{ position:relative;}
+.dynamic-nav a{ color:#09c; line-height:30px; text-decoration:none;}
+.dynamic-nav a:hover,.dynamic-nav div.show a{ color:#BF523B;}
+/* 初始化菜单 */
+.dynamic-nav li .nav-in{ padding:0 5px;}
+.dynamic-nav li li{ height:30px; border-top:1px solid #ccc;}
+.dynamic-nav li li.first{ border-top:0 none;}
+.dynamic-nav li ul{ background:#e8f2fa; border:1px solid #ccc; position:absolute; top:30px; left:0; display:none; width:160px;}
+.dynamic-nav li ul.level-2 .nav-in{ clear:both; height:30px; overflow:hidden;}
+.dynamic-nav li ul.level-2 a{ float:left; width:100%;}
+.dynamic-nav li ul.show{ display:block;}
+.dynamic-nav li ul ul{ left:160px; top:-1px;}
+/* 父级菜单 */
+.dynamic-nav li.nav-li-parent{ padding-right:12px; background:url(images/arrow-down.gif) no-repeat right center;}
+.dynamic-nav ul.level-2 li.nav-li-parent{ padding-right:0; background:url(images/arrow-right.gif) no-repeat right center;}
+/* 当前菜单 */
+.dynamic-nav li.current{ background:#f4f2de;}
+.dynamic-nav li.current div.current a{ color:#875cca;}
+.dynamic-nav li.current div.current a:hover{ color:#BF523B;}
+/* IE6的iFrame遮盖 */
+.emptyFrame{ position:absolute; z-index:-1; left:0; top:0; width:0; height:0; filter:alpha(opacity=0); opacity:0; border:1px solid red;}
+
+/* 下拉菜单控件样式 d-nav */
+.d-nav{ background:#e8f2fa; border:1px solid #ddd; clear:both; height:30px; line-height:30px; overflow:visible; position:relative;}
+.d-nav ul.level-1{ clear:both; height:30px; padding:0 10px; overflow:visible;}
+.d-nav li.level-1{ float:left; display:inline; border-right:1px solid #ddd;}
+.d-nav div.level-1{ padding:0 10px; font-weight:bold; font-size:14px;}
+
+/* 下拉菜单控件样式 d-pos */
+.d-pos{ clear:both; height:30px; line-height:30px; overflow:visible; position:relative;}
+.d-pos ul.level-1{ clear:both; height:30px; overflow:visible;}
+.d-pos li.level-1{ float:left; display:inline; padding-left:10px; padding-right:5px; background:url(images/delta.gif) no-repeat left center;}
+.d-pos li.first{ padding:0 5px 0 0; background-image:none;}
+.d-pos li.prepend{ padding:0; background-image:none;}
+.d-pos li.prepend div.prepend{ padding:0;}
+.d-pos li.nav-li-parent div.level-1 a{ text-decoration:underline;}
+.d-pos li.nav-li-parent div.level-1 a:hover{ text-decoration:none;}
+.d-pos li.current{ font-weight:bold;}
+.d-pos div.level-1{ padding:0 5px; font-size:14px;}

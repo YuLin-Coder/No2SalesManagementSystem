@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body{
+	background: #FFF;
+	padding: 3px;
+	margin: 0;
+	font-family: 微软雅黑;
+}
+
+#accountForm input{
+	width: 160px;
+}
+
+#accountForm td{
+}
+
+#accountTable tr{
+	cursor: pointer;
+}

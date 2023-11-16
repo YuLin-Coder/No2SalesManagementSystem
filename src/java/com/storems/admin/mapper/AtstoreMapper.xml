@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.storems.admin.dao.AtstoreDao">
+
+    <select id="findAtstorePage" resultType="java.util.Map" parameterType="java.util.Map">
+
+        select ID As id,
+            RELATION_ID As relationId,
+            GOODS_ID As goodsId,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            UINT As unit
+        from tb_atstore
+        limit #{begin},  #{pageSize}
+    </select>
+
+    <select id="findAtstorePageCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*)  from tb_atstore
+    </select>
+
+
+    <select id="findById" resultType="com.storems.admin.entity.Atstore" >
+
+        select ID As id,
+            RELATION_ID As relationId,
+            GOODS_ID As goodsId,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            UINT As unit
+        from tb_atstore
+        where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.storems.admin.entity.Atstore" >
+        INSERT INTO tb_atstore (ID,RELATION_ID,GOODS_ID,AMOUNT,NOTE,GOODS_NAME,UINT)
+        VALUES (#{id},#{relationId},#{goodsId},#{amount},#{note},#{goodsName}, #{unit})
+    </insert>
+
+
+    <update id="update" parameterType="com.storems.admin.entity.Atstore" >
+       UPDATE tb_atstore
+        SET
+            RELATION_ID =#{relationId},
+            GOODS_ID =#{goodsId},
+            AMOUNT =#{amount},
+            NOTE =#{note},
+            GOODS_NAME =#{goodsName},
+            UINT =#{unit}
+             WHERE ID = #{id}
+        </update>
+
+    <delete id="batchDelete" >
+        DELETE FROM tb_atstore WHERE ID = #{id}
+    </delete>
+
+    <select id="getByRelationId" resultType="com.storems.admin.entity.Atstore" >
+
+        select ID As id,
+            RELATION_ID As relationId,
+            GOODS_ID As goodsId,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            UINT As unit
+        from tb_atstore
+        where RELATION_ID=#{relationId}
+    </select>
+    <select id="getByGoodsId" resultType="com.storems.admin.entity.Atstore" >
+
+        select ID As id,
+            RELATION_ID As relationId,
+            GOODS_ID As goodsId,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            UINT As unit
+        from tb_atstore
+        where GOODS_ID=#{goodsId}
+    </select>
+</mapper>

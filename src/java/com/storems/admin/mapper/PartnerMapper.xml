@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.storems.admin.dao.PartnerDao">
+
+    <select id="findPartnerPage" resultType="java.util.Map" parameterType="java.util.Map">
+
+        select ID As id,
+            NAME As name,
+            TYPE As type,
+            PROPERTY As property,
+            ADDRESS As address,
+            LINK_MAN As linkMan,
+            LINK_PHONE As linkPhone,
+            TELPHONE As telphone,
+            NOTE As note
+        from tb_partner where TYPE=#{type}
+        limit #{begin},  #{pageSize}
+    </select>
+
+    <select id="findPartnerPageCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*)  from tb_partner where TYPE=#{type}
+    </select>
+
+
+    <select id="findById" resultType="com.storems.admin.entity.Partner" >
+
+        select ID As id,
+            NAME As name,
+            TYPE As type,
+            PROPERTY As property,
+            ADDRESS As address,
+            LINK_MAN As linkMan,
+            LINK_PHONE As linkPhone,
+            TELPHONE As telphone,
+            NOTE As note
+        from tb_partner
+        where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.storems.admin.entity.Partner" >
+        INSERT INTO tb_partner (ID,NAME,TYPE,PROPERTY,ADDRESS,LINK_MAN,LINK_PHONE,TELPHONE,NOTE)
+        VALUES (#{id},#{name},#{type},#{property},#{address},#{linkMan}, #{linkPhone},#{telphone},#{note})
+    </insert>
+
+
+    <update id="update" parameterType="com.storems.admin.entity.Partner" >
+       UPDATE tb_partner
+        SET
+            NAME =#{name},
+            TYPE =#{type},
+            PROPERTY =#{property},
+            ADDRESS =#{address},
+            LINK_MAN =#{linkMan},
+            LINK_PHONE =#{linkPhone},
+            TELPHONE =#{telphone},
+            NOTE =#{note}
+             WHERE ID = #{id}
+
+        </update>
+
+    <delete id="batchDelete" >
+        DELETE FROM tb_partner WHERE ID = #{id}
+    </delete>
+
+
+    <select id="listByType" resultType="com.storems.admin.entity.Partner" >
+
+        select ID As id,
+            NAME As name,
+            TYPE As type,
+            PROPERTY As property,
+            ADDRESS As address,
+            LINK_MAN As linkMan,
+            LINK_PHONE As linkPhone,
+            TELPHONE As telphone,
+            NOTE As note
+        from tb_partner
+        where TYPE=#{type}
+    </select>
+</mapper>

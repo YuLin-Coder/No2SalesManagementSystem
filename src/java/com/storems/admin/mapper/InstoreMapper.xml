@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.storems.admin.dao.InstoreDao">
+
+    <select id="findInstorePage" resultType="java.util.Map" parameterType="java.util.Map">
+
+        select ID As id,
+            GOODS_ID As goodsId,
+            PROVIDER_ID As providerId,
+            USER_ID As userId,
+            IN_DATE As inDate,
+            PRICE As price,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            PROVIDER_NAME As providerName,
+            USERNAME As userName
+        from tb_instore
+        limit #{begin},  #{pageSize}
+    </select>
+
+    <select id="findInstorePageCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(*)  from tb_instore
+    </select>
+
+
+    <select id="findById" resultType="com.storems.admin.entity.Instore" >
+
+        select ID As id,
+             GOODS_ID As goodsId,
+            PROVIDER_ID As providerId,
+            USER_ID As userId,
+            IN_DATE As inDate,
+            PRICE As price,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            PROVIDER_NAME As providerName,
+            USERNAME As userName
+        from tb_instore
+        where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.storems.admin.entity.Instore" >
+        INSERT INTO tb_instore (ID,GOODS_ID,PROVIDER_ID,USER_ID,IN_DATE,PRICE,AMOUNT,NOTE,GOODS_NAME,PROVIDER_NAME,USERNAME)
+        VALUES (#{id},#{goodsId},#{providerId},#{userId},#{inDate},#{price}, #{amount}, #{note}, #{goodsName}, #{providerName}, #{userName})
+    </insert>
+
+
+    <update id="update" parameterType="com.storems.admin.entity.Instore" >
+       UPDATE tb_instore
+        SET
+            GOODS_ID =#{goodsId},
+            PROVIDER_ID =#{providerId},
+            USER_ID =#{userId},
+            IN_DATE =#{inDate},
+            PRICE =#{price},
+            AMOUNT =#{amount},
+            NOTE =#{note},
+            GOODS_NAME =#{goodsName},
+            PROVIDER_NAME =#{providerName},
+            USERNAME =#{userName}
+             WHERE ID = #{id}
+        </update>
+
+    <delete id="batchDelete" >
+        DELETE FROM tb_instore WHERE ID = #{id}
+    </delete>
+
+    <select id="statisticalByParam" resultType="com.storems.admin.entity.Instore" parameterType="java.util.Map" >
+
+        select ID As id,
+             GOODS_ID As goodsId,
+            PROVIDER_ID As providerId,
+            USER_ID As userId,
+            IN_DATE As inDate,
+            PRICE As price,
+            AMOUNT As amount,
+            NOTE As note,
+            GOODS_NAME As goodsName,
+            PROVIDER_NAME As providerName,
+            USERNAME As userName
+        from tb_instore
+        where  IN_DATE >=#{startDate} and #{endDate} >= IN_DATE order by IN_DATE desc;
+    </select>
+
+
+</mapper>

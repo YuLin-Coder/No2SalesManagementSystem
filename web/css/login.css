@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 9pt;
+	background-color: #FFF;
+	text-align: center;
+}
+
+#login {
+	margin: auto;
+	width: 975px;
+	height: 368px;
+	margin-top: 120px;
+}
+
+#top_left {
+	width: 691px;
+	height: 89px;
+	float: left;
+	text-align: left;
+}
+
+#top_left img {
+	margin-left: 33px;
+}
+
+#top_center {
+	width: 248px;
+	height: 89px;
+	background: url(../image/img/login_05.gif);
+	float: left;
+}
+
+#center_left {
+	width: 691px;
+	height: 190px;
+	background: url(../image/img/login_09.gif);
+	float: left;
+}
+
+.center_middle {
+	width: 248px;
+	height: 190px;
+	float: left;
+	text-align: left;
+	background: url(../image/img/login_13.gif) repeat-y;
+}
+
+.center_middle_loading {
+	width: 248px;
+	height: 140px;
+	float: left;
+	text-align: center;
+	z-index: 1px;
+	background: url(../image/img/tm_1.png) repeat;
+	background: url(../image/img/login_13.gif) repeat-y;
+	position: absolute;
+	color: #F33;
+	font-size: 18px;
+	font-weight: bold;
+	display: none;
+}
+.center_middle_loading_msg{
+	margin-top: 50px;
+}
+
+#center_right {
+	width: 36px;
+	height: 190px;
+	float: right;
+	background: url(../image/img/login_11.gif);
+}
+
+#down_left {
+	width: 691px;
+	height: 89px;
+	float: left;
+	margin-top: 15px;
+}
+
+#down_center {
+	width: 248px;
+	height: 89px;
+	background: url(../image/img/login_16.gif);
+	float: left;
+}
+
+#inf {
+	width: 691px;
+	height: 38px;
+	background: url(../image/img/login_18.gif) no-repeat;
+}
+
+.inf_text {
+	display: block;
+	width: 100px;
+	height: 20px;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #fff;
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+	text-align: left;
+}
+
+.copyright {
+	display: block;
+	float: left;
+	margin-top: 11px;
+	font-size: 14px;
+	color: #113965;
+}
+
+.input_row {
+	margin-top: 12px;
+	margin-left: 12px;
+	color: #113965;
+	height: 22px;
+	line-height: 22px;
+}
+.input_row_left{
+	width:55px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+}
+.input_row_rigth{
+	float: left;
+}
+.input_vcode_left{
+	width:80px;
+	float: left;
+}
+.input_vcode_rigth{
+	width:70px;
+	float: left;
+}
+
+.input_vcode_rigth img{
+	width: 70px;
+	height: 20px;
+	border: 1px solid #545454;
+	float: right;
+}
+
+.input_row_ope {
+	margin-left: 50px;
+	margin-top: 12px;
+	color: #113965;
+}
+
+.input_account {
+	width: 150px;
+	padding: 2px;	
+	border: solid 1px #545454;
+	background-color: #FFFFFF;
+	color: #113965;
+}
+
+.input_vcode {
+	width: 70px;
+	padding: 2px;	
+	border: solid 1px #545454;
+	background-color: #FFFFFF;
+	color: #545454;
+}
+
+.input_row_status{
+	background-color: #FFF0A5;
+	margin: 10px;
+	padding: 3px;
+	border: 1px solid #F7B64A;
+	color: #F33;
+	text-align: center;
+}

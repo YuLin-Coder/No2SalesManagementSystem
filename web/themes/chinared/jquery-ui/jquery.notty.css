@@ -1,0 +1,173 @@
+/*!
+ * jQuery Notty
+ * http://www.userdot.net/#!/jquery
+ *
+ * Copyright 2011, UserDot www.userdot.net
+ * Licensed under the GPL Version 3 license.
+ * Version 1.0.0
+ *
+ */
+ #nottys {
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    width: 280px;
+    z-index: 999;
+}
+#nottys .notty {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #fff;
+    --background: rgba(0,0,0,0.8);
+    text-shadow: black 0px 1px 2px;
+    font: normal 12px/17px Helvetica;
+    border: 1px solid #A20005;
+    --border: 1px solid rgba(0,0,0,0.7); 
+    --background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.9)), -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    --background: -moz-linear-gradient(0% 100% 90deg, rgba(0, 0, 0, 0.9), transparent), -moz-linear-gradient(0% 100% 90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 2px 13px, rgba(0,0,0,0.6) 0px -3px 13px, rgba(255,255,255,0.5) 0px 1px 0px inset;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0px 2px 13px, rgba(0,0,0,0.6) 0px -3px 13px, rgba(255,255,255,0.5) 0px 1px 0px inset;
+    box-shadow: rgba(0,0,0,0.8) 0px 2px 13px, rgba(0,0,0,0.6) 0px -3px 13px, rgba(255,255,255,0.5) 0px 1px 0px inset;
+    position: absolute;
+	z-index:9999;
+    bottom: 5px;
+    right: 20px;
+    width: 280px;
+	height:100px;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    overflow: hidden;
+    _overflow: visible;
+    _zoom: 1;
+}
+.pop {
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-name: pop;
+    -webkit-animation-timing-function: ease-in;
+}
+
+.remove {
+    -webkit-animation-iteration-count: 1; 
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 0.3s; 
+    -webkit-animation-name: 'remove';
+}
+
+#nottys .notty.click {
+    cursor: pointer;
+}
+#nottys .notty .hide {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 20px;
+    height: 20px;
+	width:20px;
+	text-align:center;
+    --background: black;
+    right: 0px;
+    top: 0px;
+    padding: 5px;
+    --background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), black);
+    --background: -moz-linear-gradient(0% 100% 90deg, black, rgba(0, 0, 0, 0.7));
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-box-shadow: rgba(255,255,255,0.5) 0px -1px 0px inset, rgba(255,255,255,0.5) 0px 1px 0px inset, black 0px 5px 6px;
+    -moz-box-shadow: rgba(255,255,255,0.5) 0px -1px 0px inset, rgba(255,255,255,0.5) 0px 1px 0px inset, black 0px 5px 6px;
+    box-shadow: rgba(255,255,255,0.5) 0px -1px 0px inset, rgba(255,255,255,0.5) 0px 1px 0px inset, black 0px 5px 6px;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    cursor: pointer;
+    display: none;
+}
+#nottys .notty .hide:hover {
+    background: white;
+    background: -webkit-linear-gradient(#fff, rgba(255,255,255,0.9));
+    background: -moz-linear-gradient(0% 100% 90deg, rgba(255, 255, 255, 0.9), #fff);
+    color: black;
+    text-shadow: none;
+}
+#nottys .notty .right, #nottys .notty .left {
+    width: 79%;
+    height: 100%;
+    float: left;
+}
+#nottys .notty .time {
+    font-size: 9px;
+    position: relative;
+}
+#nottys .notty .right .time {
+    margin-left: 19px;
+}
+#nottys .notty .left {
+    width: 20%;
+}
+#nottys .notty .right {
+
+}
+#nottys .notty .right .inner {
+    padding-left: 19px;
+}
+#nottys .notty .left .img:after {
+    content: '';
+    background: white;
+    background: -webkit-linear-gradient(transparent, rgba(255,255,255,0.6), transparent);
+    background: -moz-linear-gradient(0% 100% 90deg, transparent, rgba(255,255,255,0.6), transparent);
+    width: 1px;
+    height: 50px;
+    position: absolute;
+    right: -10px;
+}
+#nottys .notty .left .img {
+    width: 100%;
+    background-size: auto 100%;
+    height: 50px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(255,255,255,0.9) 0px 1px 0px inset, rgba(0,0,0,0.5) 0px 1px 6px;
+    -moz-box-shadow: rgba(255,255,255,0.9) 0px 1px 0px inset, rgba(0,0,0,0.5) 0px 1px 6px;
+    box-shadow: rgba(255,255,255,0.9) 0px 1px 0px inset, rgba(0,0,0,0.5) 0px 1px 6px;
+    border: 1px solid rgba(0,0,0,0.55);
+    position: relative;
+}
+#nottys .notty:after {
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    clear: both; 
+    height: 0; 
+    font-size: 0;
+}
+#nottys .notty h2 {
+    margin: 0px 0px 5px 0px;
+    font-size: 14px;
+    text-shadow: black 0px 2px 4px;
+}
+
+@-webkit-keyframes pop { 
+    from { 
+    -webkit-transform: scale(.1); 
+    opacity: 0 
+} 
+80% { 
+    -webkit-transform: scale(1.05); 
+    opacity: 1 
+} 
+to { 
+    -webkit-transform: scale(1); 
+} 
+}
+@-webkit-keyframes remove { 
+    0% {
+    opacity: 1; 
+} 
+100% { 
+    right:  -223px; 
+    opacity: 0; 
+}
+}

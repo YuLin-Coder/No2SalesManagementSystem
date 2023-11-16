@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+body{
+	background: #FFF;
+	padding: 3px;
+	margin: 0;
+	font-family: 微软雅黑;
+}
+
+#providerForm input{
+	width: 160px;
+}
+
+#providerForm td{
+}
+
+#providerTable tr{
+	cursor: pointer;
+}

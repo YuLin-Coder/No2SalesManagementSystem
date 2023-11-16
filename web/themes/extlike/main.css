@@ -1,0 +1,349 @@
+/*页面整体区域--------------------------------------------------------*/
+
+body {
+	t
+	margin: 0px;
+	padding: 0px;
+	font-size: 75%;
+}
+fieldset {
+	border: none;
+	padding: 0px 20px;
+	margin: 0px;
+}
+/*导航栏--------------------------------------------------------*/
+.navbar {
+	background-image: url(images/titlearea_bg.jpg);
+	width: 100%;
+	height: 29px;
+	clear: both;
+	margin: 0px;
+}
+/*ff ie8 ie9-------------*/
+.navbar h1 {
+	height: 29px;
+	margin: 0px;
+	margin-left: 50px;
+	padding: 0px;
+	padding-left: 12px;
+	float: left;
+	background-image: url(images/titlearea_title.jpg);
+	background-repeat: repeat-x;
+	line-height: 29px;
+	font-weight: 100;
+	font-size: 12px;
+	color: #fff;
+}
+.navbar-icon {
+    margin-top: 2px;
+    height: 24px;
+    width: 24px;
+    float: left;
+    margin-left: 10px;
+}
+
+.navbar-default-icon {
+    background-image: url(images/navbar-icon.png);
+}
+/*ie6-------------*/
+*html .navbar h1 {
+	height: 29px;
+	margin: 0px;
+	margin-left: 25px;
+	padding: 0px;
+	padding-left: 12px;
+	float: left;
+	background-image: url(images/titlearea_title.jpg);
+	background-repeat: repeat-x;
+	line-height: 29px;
+	font-weight: 100;
+	font-size: 12px;
+	color: #fff;
+}
+/*ie7-------------*/
+*+ html .navbar h1 {
+	height: 29px;
+	margin: 0px;
+	margin-left: 50px;
+	padding: 0px;
+	padding-left: 12px;
+	float: left;
+	background-image: url(images/titlearea_title.jpg);
+	background-repeat: repeat-x;
+	line-height: 29px;
+	font-weight: 100;
+	font-size: 12px;
+	color: #fff;
+}
+.navbar h2 {
+
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 12px;
+	float: left;
+	background-image: url(images/titlearea_title.jpg);
+	background-repeat: repeat-x;
+	line-height: 29px;
+	font-weight: 100;
+	font-size: 12px;
+	color: #fff;
+}
+.navbar .messages {
+	font-size: 12px;
+	color: #fff;
+	float: right;
+	margin: 0px;
+	height: 29px;
+	padding: 0 15px 0 35px;
+	line-height: 29px;
+}
+.navbar .error {
+	background-image: url(images/titlearea_err_msg.png);
+	background-repeat: no-repeat;
+}
+.navbar .success {
+	background-image: url(images/titlearea_succ_msg.png);
+	background-repeat: no-repeat;
+}
+.navbar .deco_left {
+	float: right;
+	background-image: url(images/titlearea_right.jpg);
+	background-repeat: no-repeat;
+	margin: 0px;
+	width: 22px;
+	height: 38px;
+	display: none;
+}
+.title_level1 {
+	display:none;
+	width: 100%;
+	height: 30px;
+	padding: 0px;
+	background-image: url(images/title_level1.jpg);
+	background-repeat: repeat-x;
+	clear: both;
+	text-align: left;
+	border: 1px solid #A3C6E2;
+	border-left: none;
+	border-right: none;
+}
+.title_level1 span {
+	padding-left: 15px;
+	font-weight: bolder;
+	font-size: 14px;
+	color: #fff;
+	line-height: 30px;
+}
+.title_level2 {
+	background-image: url(images/title_level2.jpg);
+	background-repeat: repeat-x;
+	height: 17px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+.title_level3 {
+	background-image: url(images/title_level3.jpg);
+	background-repeat: repeat-x;
+	height: 17px;
+	font-size: 12px;
+	color: #FFF;
+	margin: 2px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+.title_level4 {
+	background-image: url(images/title_level4.jpg);
+	background-repeat: repeat-x;
+	height: 27px;
+	font-size: 12px;
+	color: #333333;
+	margin: 2px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-top: 9px;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D0DCEA;
+}
+/*操作工具栏区域--------------------------------------------------------*/
+.toolbar {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 40px;
+	clear: both;
+	text-align: left;
+	font-size: 12px;
+	background: url(images/heng.jpg) repeat-x;
+}
+.toolbar .btn {
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 28px;
+	cursor: hand;
+	float: left;
+	background-image: url(images/btn1_bg_out.jpg);
+	background-repeat: repeat-x;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	line-height: 28px;
+	border: 0px;
+	border-bottom: solid 1px #a6c6dd;
+	border-right: solid 1px #a6c6dd;
+	border-left: solid 1px #a6c6dd;
+	border-top: solid 1px #a6c6dd;
+}
+.toolbar .btn_hover {
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 28px;
+	cursor: hand;
+	float: left;
+	background-image: url(images/btn1_bg_hover.jpg);
+	background-repeat: repeat-x;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #333333;
+	text-align: center;
+	line-height: 28px;
+	border: 0px;
+	border-bottom: solid 1px #DCE0E9;
+	border-right: solid 1px #DCE0E9;
+}
+.toolbar-inner {
+	margin: 0px;
+	padding-top: 5px;
+	padding-left: 5px;
+	height: 35px;
+}
+.toolbar-inner select {
+	float: left;
+}
+.toolbar select {
+	font-size: 12px;
+	color: #00428c;
+	border-top: 1px #808080;
+	border-right: 1px #e3dccf;
+	border-bottom: 1px #e3dccf;
+	border-left: 1px #808080;
+	border-style: solid;
+}
+.toolbar input[type="text"] {
+	font-size: 12px;
+	color: #00428c;
+	border-top: 1px #808080;
+	border-right: 1px #e3dccf;
+	border-bottom: 1px #e3dccf;
+	border-left: 1px #808080;
+	border-style: solid;
+}
+/*名称与值的对齐方式--------------------------------------------------------*/
+.inputname {
+	text-align: right;
+}
+.inputvalue {
+	padding-left: 2px;
+	text-align: left;
+	float: left;
+}
+label.error {
+	color: red;
+	font-size: 12px;
+}
+.input .error {
+    border: 1px solid #FF7777 !important;
+}
+
+/*各种字体--------------------------------------------------------*/
+#font_red {
+	float: left;
+	padding-top: 5px;
+	padding-left: 5px;
+	color: red;
+}
+/*页面按钮区域----------------------------------------------------------*/
+.buttons {
+	height: 36px;
+	width: 95%;
+	text-align: right;
+}
+.buttons button {
+	margin: 0 5px 2px 0;
+}
+/*弹出窗口表单区域--------------------------------------------------------*/
+.formarea fieldset {
+	padding: 0px;
+	margin: 0px;
+}
+.formarea form {
+	padding: 0px;
+	margin: 0px;
+}
+.formarea table {
+	align: left;
+	margin: auto;
+	font-size: 12px;
+	color: #304E61;
+	table-layout: fixed;
+}
+.formarea tr {
+	height: 22px;
+}
+.formarea th {
+	height: 30px;
+	color: #333;
+	font-size: 12px;
+}
+.formarea td {
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+.formarea select {
+	font-size: 12px;
+	color: #304E61;
+	border-top: 1px #808080;
+	border-right: 1px #e3dccf;
+	border-bottom: 1px #e3dccf;
+	border-left: 1px #808080;
+	border-style: solid;
+}
+.formarea input[type="text"] {
+	font-size: 12px;
+	color: #00428c;
+	border-top: 1px #808080;
+	border-right: 1px #e3dccf;
+	border-bottom: 1px #e3dccf;
+	border-left: 1px #808080;
+	border-style: solid;
+	background-image: url(images/input_bg.jpg);
+}
+.formarea textarea {
+	font-size: 12px;
+	color: #00428c;
+	border-top: 1px #808080;
+	border-right: 1px #e3dccf;
+	border-bottom: 1px #e3dccf;
+	border-left: 1px #808080;
+	border-style: solid;
+}
+.formarea a {
+	color: #304e61;
+}
+.pageloading {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 2000px;
+	height: 600px;
+	z-index: 20001;
+	background-color: #000;
+}
